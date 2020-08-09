@@ -1,6 +1,6 @@
 # Filter spams
 
-[![Latest Stable Version](https://poser.pugx.org/pkboom/laravel-spam-filter/v/stable)](https://packagist.org/packages/pkboom/laravel-spam-filter)
+[![Latest Stable Version](https://poser.pugx.org/pkboom/laravel-spam-filter/v)](//packagist.org/packages/pkboom/laravel-spam-filter)
 [![Build Status](https://travis-ci.com/pkboom/laravel-spam-filter.svg?branch=master)](https://travis-ci.com/pkboom/laravel-spam-filter)
 
 Using a honeypot, you can easily filter spams. This package uses [spatie/laravel-honeypot](https://github.com/spatie/laravel-honeypot) under the hood.
