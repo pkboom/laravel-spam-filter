@@ -31,7 +31,7 @@ class SpamTest extends TestCase
     public function it_is_a_spam_if_honeypost_has_any_value()
     {
         $this->post('/', [
-            'matsu_honeypot' => 'some value',
+            'honeypot' => 'some value',
         ])->assertStatus(400);
     }
 
@@ -39,7 +39,7 @@ class SpamTest extends TestCase
     public function it_is_a_spam_if_time_value_is_invalid()
     {
         $this->post('/', [
-            'matsu_honeypot' => null,
+            'honeypot' => null,
             'encrypted_time' => 'invalid time',
         ])->assertStatus(400);
     }
@@ -48,7 +48,7 @@ class SpamTest extends TestCase
     public function it_is_a_spam_if_creating_a_reservation_takes_very_short_time()
     {
         $this->post('/', [
-            'matsu_honeypot' => null,
+            'honeypot' => null,
             'encrypted_time' => EncryptedTime::create(now()->addSecond())->__toString(),
         ])->assertStatus(400);
     }
