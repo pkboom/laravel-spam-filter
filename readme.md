@@ -19,12 +19,11 @@ Place this in your form.
 
 ```html
 <form>
-    <input name="honeypot" type="text" value="" class="hidden" />
+    <input name="honeypot" type="hidden" value="" />
     <input
         name="encrypted_time"
-        type="text"
+        type="hidden"
         value="{{ \Spatie\Honeypot\EncryptedTime::create(now()->addSecond()) }}"
-        class="hidden"
     />
     ...
 </form>
