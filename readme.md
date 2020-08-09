@@ -17,10 +17,15 @@ composer require pkboom/laravel-spam-filter
 
 Place this in your form.
 
-```php
+```html
 <form>
-    <input name="honeypot" type="text" value="">
-    <input name="encrypted_time" type="text" value="{{ \Spatie\Honeypot\EncryptedTime::create(now()->addSecond()) }}">
+    <input name="honeypot" type="text" value="" class="hidden" />
+    <input
+        name="encrypted_time"
+        type="text"
+        value="{{ \Spatie\Honeypot\EncryptedTime::create(now()->addSecond()) }}"
+        class="hidden"
+    />
     ...
 </form>
 ```
