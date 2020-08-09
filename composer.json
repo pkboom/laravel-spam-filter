@@ -1,0 +1,47 @@
+{
+    "name": "pkboom/laravel-spam-filter",
+    "description": "",
+    "keywords": [
+        "pkboom",
+        "laravel-spam-filter"
+    ],
+    "homepage": "https://github.com/pkboom/laravel-spam-filter",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Keunbae Park",
+            "email": "ppotpo@gmail.com"
+        }
+    ],
+    "require": {
+        "php": "^7.3",
+        "spatie/laravel-honeypot": "^2.2"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^5.2",
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Pkboom\\SpamFilter\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit"
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Pkboom\\SpamFilter\\SpamFilterServiceProvider"
+            ]
+        }
+    }
+}
