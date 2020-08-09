@@ -45,7 +45,7 @@ class SpamTest extends TestCase
     }
 
     /** @test */
-    public function it_is_a_spam_if_creating_a_reservation_takes_a_very_short_time()
+    public function it_is_a_spam_if_creating_a_reservation_takes_very_short_time()
     {
         $this->post('/', [
             'matsu_honeypot' => null,
